@@ -14,7 +14,6 @@
 		"plugin:prettier/recommended",
 		"prettier"
 	],
-	"ignorePatterns": ["dist", ".eslintrc.cjs"],
 	"parser": "@typescript-eslint/parser",
 	"plugins": ["react-refresh", "prettier"],
 	"globals": {
@@ -22,6 +21,7 @@
 		"module": true
 	},
 	"rules": {
+		"react/no-unescaped-entities": "off",
 		"react-refresh/only-export-components": [
 			"warn",
 			{ "allowConstantExport": true }
