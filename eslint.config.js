@@ -7,6 +7,9 @@ export default [
 	{ files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
 	{ languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } } },
 	{ languageOptions: { globals: globals.browser } },
+	{
+		ignores: ['public/*', '**/mammoth-browser.js'],
+	},
 	pluginJs.configs.recommended,
 	...tseslint.configs.recommended,
 	pluginReactConfig,

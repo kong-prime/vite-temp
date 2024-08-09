@@ -1,0 +1,1 @@
+window.mammoth = require('mammoth');
