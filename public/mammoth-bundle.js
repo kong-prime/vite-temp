@@ -243,7 +243,6 @@
 						 * @author   Feross Aboukhadijeh <https://feross.org>
 						 * @license  MIT
 						 */
-						/* eslint-disable no-proto */
 
 						'use strict';
 
@@ -590,7 +589,6 @@
 
 						function SlowBuffer(length) {
 							if (+length != length) {
-								// eslint-disable-line eqeqeq
 								length = 0;
 							}
 							return Buffer.alloc(+length);
@@ -2352,7 +2350,7 @@
 						}
 						function numberIsNaN(obj) {
 							// For IE11 support
-							return obj !== obj; // eslint-disable-line no-self-compare
+							return obj !== obj;
 						}
 					}).call(this);
 				}).call(this, require('buffer').Buffer);
@@ -2506,7 +2504,7 @@
 						(!nonEnumerable && !nonWritable && !nonConfigurable)
 					) {
 						// must fall back to [[Set]], and was not explicitly asked to make non-enumerable, non-writable, or non-configurable
-						obj[property] = value; // eslint-disable-line no-param-reassign
+						obj[property] = value;
 					} else {
 						throw new $SyntaxError(
 							'This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.'
@@ -2789,7 +2787,6 @@
 
 				var $Function = Function;
 
-				// eslint-disable-next-line consistent-return
 				var getEvalledConstructor = function (expressionSyntax) {
 					try {
 						return $Function(
@@ -2813,7 +2810,6 @@
 				var ThrowTypeError = $gOPD
 					? (function () {
 							try {
-								// eslint-disable-next-line no-unused-expressions, no-caller, no-restricted-properties
 								arguments.callee; // IE 8 does not throw here
 								return throwTypeError;
 							} catch (calleeThrows) {
@@ -2835,7 +2831,7 @@
 					(hasProto
 						? function (x) {
 								return x.__proto__;
-							} // eslint-disable-line no-proto
+							}
 						: null);
 
 				var needsEval = {};
@@ -2875,7 +2871,7 @@
 					'%encodeURI%': encodeURI,
 					'%encodeURIComponent%': encodeURIComponent,
 					'%Error%': $Error,
-					'%eval%': eval, // eslint-disable-line no-eval
+					'%eval%': eval,
 					'%EvalError%': $EvalError,
 					'%Float32Array%':
 						typeof Float32Array === 'undefined' ? undefined : Float32Array,
@@ -2953,7 +2949,7 @@
 
 				if (getProto) {
 					try {
-						null.error; // eslint-disable-line no-unused-expressions
+						null.error;
 					} catch (e) {
 						// https://github.com/tc39/proposal-shadowrealm/pull/384#issuecomment-1364264229
 						var errorProto = getProto(getProto(e));
@@ -3367,7 +3363,7 @@
 					obj[sym] = symVal;
 					for (sym in obj) {
 						return false;
-					} // eslint-disable-line no-restricted-syntax, no-unreachable-loop
+					}
 					if (
 						typeof Object.keys === 'function' &&
 						Object.keys(obj).length !== 0
@@ -3634,7 +3630,7 @@
 							},
 						});
 						isCallableMarker = {};
-						// eslint-disable-next-line no-throw-literal
+
 						reflectApply(
 							function () {
 								throw 42;
@@ -3682,7 +3678,7 @@
 				var hasToStringTag =
 					typeof Symbol === 'function' && !!Symbol.toStringTag; // better: use `has-tostringtag`
 
-				var isIE68 = !(0 in [,]); // eslint-disable-line no-sparse-arrays, comma-spacing
+				var isIE68 = !(0 in [,]); // eslint-disable-line no-sparse-arrays
 
 				var isDDA = function isDocumentDotAll() {
 					return false;
@@ -3706,7 +3702,7 @@
 											str === ddaClass3 || // opera 12.16
 											str === objectClass) && // IE 6-8
 										value('') == null
-									); // eslint-disable-line eqeqeq
+									);
 								} catch (e) {
 									/**/
 								}
@@ -3775,7 +3771,6 @@
 				var hasToStringTag = require('has-tostringtag/shams')();
 				var getProto = Object.getPrototypeOf;
 				var getGeneratorFunc = function () {
-					// eslint-disable-line consistent-return
 					if (!hasToStringTag) {
 						return false;
 					}
@@ -5479,7 +5474,6 @@
 						var tryTypedArrays = function tryAllTypedArrays(value) {
 							/** @type {ReturnType<typeof tryAllTypedArrays>} */ var found = false;
 							forEach(
-								// eslint-disable-next-line no-extra-parens
 								/** @type {Record<`\$${TypedArrayName}`, Getter>} */ /** @type {any} */ (
 									cache
 								),
@@ -5504,7 +5498,6 @@
 						var trySlices = function tryAllSlices(value) {
 							/** @type {ReturnType<typeof tryAllSlices>} */ var found = false;
 							forEach(
-								// eslint-disable-next-line no-extra-parens
 								/** @type {Record<`\$${TypedArrayName}`, Getter>} */ /** @type {any} */ (
 									cache
 								),

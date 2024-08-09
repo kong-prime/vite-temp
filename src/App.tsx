@@ -1,14 +1,9 @@
 import './index.css';
 import React from 'react';
-// import './App.css';
-import FrlLanding from './sandboxes/FRL';
-import DocxUploader from './sandboxes/OCM';
-import CSVReader from './sandboxes/CSVReader';
+import DocUploader from './screens/UploadFile';
 
 function App() {
-	return <DocxUploader />;
-	return <CSVReader />;
-	return <FrlLanding />;
+	return <DocUploader />;
 }
 
 export default App;
