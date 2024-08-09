@@ -18,9 +18,15 @@
 		"@emotion/react": "^11.13.0",
 		"@emotion/styled": "^11.13.0",
 		"@mui/material": "^5.16.4",
+		"mammoth": "^1.8.0",
+		"papaparse": "^5.4.1",
+		"pdf-lib": "^1.17.1",
+		"pdfjs-dist": "^4.5.136",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
-		"react-hook-form": "^7.52.1"
+		"react-dropzone": "^14.2.3",
+		"react-hook-form": "^7.52.1",
+		"text-readability": "^1.1.0"
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "^1.6.1",
@@ -64,8 +70,8 @@
 	},
 	"lint-staged": {
 		"*.{ts,tsx}": [
-			"npm run lint",
 			"npm run format",
+			"npm run lint",
 			"npm run restage"
 		]
 	},
